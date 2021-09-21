@@ -133,15 +133,15 @@ If your application allows the user to sort the list by the due date, you will e
     - [10 Points] Full credit will be given only if each class has a single responsibility, as evidenced by the attribute and method modifiers
     - [5 Points] Partial credit will be given if classes relate to multiple distinct responsibilities
     - [0 Points] No credit will be given if there are only one or two classes
-- [ ] GUI reflects a well planned design
+- [x] GUI reflects a well planned design
     - [10 Points] Full credit will be given only if each required behavior is accessible from the GUI and the overall layout reflects the guidelines and practices as described by Microsoft or Mac
     - [5 Points] Partial credit will be given for a GUI that is difficult to use and/or navigate
     - [0 Points] No credit will be given if the GUI fails to support the application requirements
-- [ ] [10 Points] Application implementation reflects a well planned design and follows the "clean code" guidelines described in the course notes and the book Clean Code
+- [x] [10 Points] Application implementation reflects a well planned design and follows the "clean code" guidelines described in the course notes and the book Clean Code
     - [5 Points] Partial credit will be given if your code is hard to read, hard to understand, hard to follow, or yield incorrect results
     - [0 Points] No credit will be given if your application is incomplete or does not run on the grader's machine
-- [ ] [10 Points] Each required behavior has an associated JUnit test, and those tests pass when run against the solution 
+- [x] [10 Points] Each required behavior has an associated JUnit test, and those tests pass when run against the solution 
     - [5 Points] Partial credit will be given if any tests are missing or fail when they are run
     - [0 Points] No credit will be given if all tests are missing or if all tests fail when they are run
-- [ ] [6 Points] Application design has been updated to reflect any changes in the requirements
-- [ ] [5 points] Provided user guide either from within the application or as a readme.md file on GitHub
+- [x] [6 Points] Application design has been updated to reflect any changes in the requirements
+- [x] [5 points] Provided user guide either from within the application or as a readme.md file on GitHub
