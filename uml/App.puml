@@ -1,0 +1,141 @@
+@startuml
+class ToDoListApplication {
+    + start()
+    + main()
+}
+
+class ToDoListApplicationController {
+    - TableView<Item>
+    - ImageView
+    - TableView.TableViewSelectionModel<Item>
+    - ToDoList
+    - FileChooser
+    - FileOperator
+
+    /'Application Operations'/
+    + initialize(): void
+    + saveListButtonPressed(ActionEvent): void
+    + loadListButtonPressed(ActionEvent): void
+    + helpImageButtonPressed(ActionEvent): void
+
+    /'List Operations'/
+    + addItemButtonPressed(ActionEvent): void
+    + removeItemButtonPressed(ActionEvent): void
+    + clearListButtonPressed(ActionEvent): void
+
+    /'Item Operations'/
+    + changeStatusButtonPressed(ActionEvent): void
+    + editItemButtonPressed(): void
+
+    /'Display Operations'/
+    + displayAllItemsButtonPressed(ActionEvent): void
+    + displayCompletedItemsButtonPressed(ActionEvent): void
+    + displayIncompleteItemsButtonPressed(ActionEvent): void
+
+    /'Utilities'/
+    - loadTable(): void
+    - loadTable(ArrayList<Item>): void
+    - readyFileChooser(String): Window
+}
+
+class ToDoList {
+    - ArrayList<Item> items
+
+    + addItem(Item): void
+    + deleteItem(String): void
+    + deleteAllItems(): void
+    + getItems(): ArrayList<Items>
+    + getSingleItem(String): Item
+
+    + getCompletedItems(): ArrayList<Items>
+    + getIncompleteItems(): ArrayList<Items>
+}
+
+class Item {
+    - String description
+    - String dueDate
+    - boolean status
+
+    + Item()
+
+    + setDescription(String): void
+    + getDescription(): String
+
+    + setDueDate(String): void
+    + getDueDate(): String
+
+    + setStatus(boolean): void
+    + isStatus(): boolean
+}
+
+class FileOperator {
+    - String
+    - String
+
+    - createFile(File): void
+    - writeToFile(String): void
+    - jsonToJava(): ToDoList
+    - javaToJson(ToDoList): String
+    - isFile(): boolean
+
+    + setFilePath(String): void
+    + getFilePath(): String
+    + setFileName(String): void
+    + getFileName(): String
+
+    + saveToDoList(ToDoList): void
+    + loadToDoList(String): ToDoList
+}
+
+class HelpSceneController {
+    - ImageView
+    - helpTextArea
+
+    +initialize(): void
+}
+
+class EditItemController {
+    - TextField
+    - TextField
+    - Button
+    - Button
+    - Item
+
+    + initialize(): void
+    + editItemOkButtonPressed(ActionEvent event): void
+    + editItemCancelButtonPressed(ActionEvent event): void
+}
+
+class AddNewItemController {
+    - TextField
+    - TextField
+    - Button
+    - Button
+    - Item
+
+    + addNewItemOkButtonPressed(ActionEvent event): void
+    + addNewItemCancelButtonPressed(ActionEvent event): void
+    + getNewItem(): Item
+}
+
+class DateOperator {
+    + isDate(String): boolean
+
+    - isLeapYear(int): boolean
+}
+
+
+
+javafx.Application <|-- ToDoListApplication
+
+ToDoListApplication - ToDoListApplicationController
+ToDoListApplicationController -- AddNewItemController
+ToDoListApplicationController -- EditItemController
+ToDoListApplicationController -- HelpSceneController
+ToDoListApplicationController "1" *- ToDoList
+ToDoListApplicationController "1" *- FileOperator
+
+ToDoList "0..n" *-- Item
+
+Item - DateOperator
+@enduml
