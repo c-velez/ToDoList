@@ -2,15 +2,11 @@
 
 ## Overview
 
-Using Intellij and Gradle, you will create a GUI-based desktop application to allow a user to manage multiple "todo"-type lists.
-
-For [Part 1] of the assignment, the focus should have been on the design elements: **UML Class Diagrams, GUI Mock-Ups,** and **pseudocode**.
-
-Now that the design is complete, [Part 2] of this assignment will focus on the implementation elements: **production and test code**. During this process, you *will* discover problems with your initial design. When these discoveries are made, you will need to go back and refine your initial design to address the problems. These changes must be included in the final submission.
+The purpose of this application is to allow a user to create an itemized To Do List of at least 100 unique items. The application will allow a user to add an item with a description, a due date, and a completion status. The user will be able to edit the item description, date, and completion status. Additionally, the user will be able to save their list and open it from with in the application.
 
 ## Directions
 
-Your application **shall** satisfy the following requirements:
+The application **shall** satisfy the following requirements:
 
 ### Application Requirements
 - [x] Rqmt 1: The application shall manage a single list of items
@@ -56,23 +52,6 @@ Your application **shall** satisfy the following requirements:
     - [x] The help screen shall include a dedication to "Rey"
     - [x] As an alternative to creating a new window in the application, this help information can be provided in a markdown file called `readme.md` on your GitHub repository for this project.
     
-You **shall** use a `.gitignore` file to ensure your `.gradle` and `build` folders are not stored within Git.
-- Your repository should contain the following files and directories (with all expected subdirectories and files)
-
-~~~
-/.idea/
-/uml/
-/gradle/
-/src/
-/.gitignore
-/build.gradle
-/gradlew
-/gradlew.bat
-/settings.gradle
-~~~
-
-You **shall** place your code within a package named `ucf.assignments`
-
 You **shall** create a Class Diagram for your application using PlantUML. This diagram must be pushed to your Git repository along with your Java code.
 - Each class within your diagram must list the attributes and methods defined within that class.
 - You must store your *.puml files in a `uml` folder at the root level of your project
@@ -90,50 +69,3 @@ You **shall** write your Java code in accordance with either the Oracle or Googl
 You **shall** use JUnit5 to incorporate automated unit testing into your solutions
 - You must create a unit test for each behavior specified in the application requirements
 - You must include pseudocode in each test
-
-Your application and unit tests **shall** be completely implemented and run without errors on the grader's machine
-
-### Submission
-You will submit a link to your GitHub page. Please ensure that your repository is private until 12 hours after the due date, at which point you may make it public. 
-If the repository cannot be accessed, or if the provided link is invalid, you will receive a 0 - *please double-check your submission once it has been made*
-
-Last submissions will receive a 0 according to the syllabus.
-
-**NOTE**: All design artifacts from [Part 1] should be included in t [Part 2], except where they have been updated to reflect changes in your design.
-
-### Grading Criteria
-Point will be allocated according to the below rubric. Full points will only be awarded if your implementation is:
-- based on your design
-- satisfies the requirements
-- passes your test cases
-- abides by the rules of clean code as outlined in the module notes
-
-Elements that are entirely missing or woefully incomplete will receive no credit
-
-Scores will be deducted in the event of incomplete submissions or failure to follow directions
-
-#### Bonus Credit
-If your application allows the user to sort the list by the due date, you will earn 1 extra point for the test and 1 extra point for the implementation
-
-### Rubric
-
-- [x] [2 points] GitHub project has correct name
-- [x] [2 points] GitHub project structure is correct
-    - The correct folders are present or ignored as per assignment directions
-    - Source code is within the correct package
-- [x] UML Class diagram reflects a well planned design
-    - [10 Points] Full credit will be given only if each class has a single responsibility, as evidenced by the attribute and method modifiers
-    - [5 Points] Partial credit will be given if classes relate to multiple distinct responsibilities
-    - [0 Points] No credit will be given if there are only one or two classes
-- [x] GUI reflects a well planned design
-    - [10 Points] Full credit will be given only if each required behavior is accessible from the GUI and the overall layout reflects the guidelines and practices as described by Microsoft or Mac
-    - [5 Points] Partial credit will be given for a GUI that is difficult to use and/or navigate
-    - [0 Points] No credit will be given if the GUI fails to support the application requirements
-- [x] [10 Points] Application implementation reflects a well planned design and follows the "clean code" guidelines described in the course notes and the book Clean Code
-    - [5 Points] Partial credit will be given if your code is hard to read, hard to understand, hard to follow, or yield incorrect results
-    - [0 Points] No credit will be given if your application is incomplete or does not run on the grader's machine
-- [x] [10 Points] Each required behavior has an associated JUnit test, and those tests pass when run against the solution 
-    - [5 Points] Partial credit will be given if any tests are missing or fail when they are run
-    - [0 Points] No credit will be given if all tests are missing or if all tests fail when they are run
-- [x] [6 Points] Application design has been updated to reflect any changes in the requirements
-- [x] [5 points] Provided user guide either from within the application or as a readme.md file on GitHub
