@@ -1,4 +1,4 @@
-# Application Assignment 1 [Part 2]
+# To Do List Application
 
 ## Overview
 
@@ -72,14 +72,6 @@ You **shall** use a `.gitignore` file to ensure your `.gradle` and `build` folde
 ~~~
 
 You **shall** place your code within a package named `ucf.assignments`
-
-You **shall** include the following comment at the top of *each* of your *.java files
-~~~
-/*
- *  UCF COP3330 Summer 2021 Assignment 4 Solution
- *  Copyright 2021 Christopher Velez
- */
-~~~
 
 You **shall** create a Class Diagram for your application using PlantUML. This diagram must be pushed to your Git repository along with your Java code.
 - Each class within your diagram must list the attributes and methods defined within that class.
